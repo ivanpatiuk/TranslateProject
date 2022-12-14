@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Topics">
+      <UniqueIdentifier>{b16c8839-acba-41b3-88a2-571f8ec1e300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Topics\Transport">
+      <UniqueIdentifier>{09bca1b3-6482-45d8-a6ab-a80579534c6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Topics\Vegetables">
+      <UniqueIdentifier>{781a824c-25c2-42fa-a206-a2b02946adb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Topics\Fruits">
+      <UniqueIdentifier>{54a0e4ac-e54e-4158-bf39-da99461716a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TranslateProject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sentence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TopicTraining.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TranslationService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MatchTraining.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sentence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TopicTraining.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrainingMode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TranslationService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatchTraining.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Transport_words.txt">
+      <Filter>Topics\Transport</Filter>
+    </Text>
+    <Text Include="Transport_sentences.txt">
+      <Filter>Topics\Transport</Filter>
+    </Text>
+    <Text Include="Vegetables_sentences.txt">
+      <Filter>Topics\Vegetables</Filter>
+    </Text>
+    <Text Include="Vegetables_words.txt">
+      <Filter>Topics\Vegetables</Filter>
+    </Text>
+    <Text Include="Fruits_sentences.txt">
+      <Filter>Topics\Fruits</Filter>
+    </Text>
+    <Text Include="Fruits_words.txt">
+      <Filter>Topics\Fruits</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
