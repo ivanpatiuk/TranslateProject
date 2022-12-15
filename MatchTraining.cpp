@@ -19,13 +19,9 @@ void MatchTraining::printMenu() {
 	cout << "| У цьому режимі тренування вам потрібно встановити відповідності перек- |" << endl;
 	cout << "| ладу слів.                                                             |" << endl;
 	cout << "|                                                                        |" << endl;
-	cout << "| Доступні розділи:                                                      |" << endl;
-	cout << "| (1) Transport                                                          |" << endl;
-	cout << "| (2) Fruits                                                             |" << endl;
-	cout << "| (3) Vegetables                                                         |" << endl;
+	ConsoleInterface::printAvailableTopics();
 	cout << "|                                                                        |" << endl;
-	cout << "| Щоб повернутися до попереднього меню введіть B                         |" << endl;
-	cout << "| Щоб вийти з програми введіть S                                         |" << endl;
+	ConsoleInterface::printReturnHint();
 	cout << "--------------------------------------------------------------------------" << endl;
 }
 
@@ -61,7 +57,6 @@ void MatchTraining::startMatchTraining(int topicMode) {
 
 void MatchTraining::startTraining(int sentenceCount) {
 	string input;
-	int correctAnswersCount = 0;
 	vector<string> uaTranslation{};
 	vector<string> enTranslation{};
 	int longest = 0;
@@ -97,16 +92,7 @@ void MatchTraining::startTraining(int sentenceCount) {
 			break;
 		}
 	} while (true);
-	system("CLS");
-	for (int i = 0; i < sentenceCount; ++i) {
-		if (checkTranslation(uaTranslation.at(i),enTranslation.at(answers.at(i)))) {
-			correctAnswersCount++;
-		}
-		else {
-			cout << "Неправильна відповідність: " << uaTranslation.at(i) << " - " << enTranslation.at(answers.at(i)) << endl;
-		}
-	}
-	system("CLS");
+	int correctAnswersCount = checkAllTranslation(uaTranslation, enTranslation, answers);
 	cout << "Результат: " << 100.0 * correctAnswersCount / sentenceCount << "% правильних відповідей" << endl;
 	cout << "Нажміть будь яку кнопку для продовження" << endl;
 	_getch();
@@ -122,5 +108,19 @@ bool MatchTraining::checkTranslation(string ua, string en) {
 		}
 	}
 	return false;
+}
+
+int MatchTraining::checkAllTranslation(vector<string> uaTranslation, vector<string> enTranslation, vector<int> answers) {
+	system("CLS");
+	int correctAnswersCount = 0;
+	for (int i = 0; i < uaTranslation.size(); ++i) {
+		if (checkTranslation(uaTranslation.at(i), enTranslation.at(answers.at(i)))) {
+			correctAnswersCount++;
+		}
+		else {
+			cout << "Неправильна відповідність: " << uaTranslation.at(i) << " - " << enTranslation.at(answers.at(i)) << endl;
+		}
+	}
+	return correctAnswersCount;
 }
 

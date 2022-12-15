@@ -67,3 +67,15 @@ int ConsoleInterface::getInput(int min, int max) {
 		}
 	} while (true);
 }
+
+void ConsoleInterface::printAvailableTopics() {
+	cout << "| Доступні розділи:                                                      |" << endl;
+	cout << "| (1) Transport                                                          |" << endl;
+	cout << "| (2) Fruits                                                             |" << endl;
+	cout << "| (3) Vegetables                                                         |" << endl;
+}
+
+void ConsoleInterface::printReturnHint() {
+	cout << "| Щоб повернутися до попереднього меню введіть B                         |" << endl;
+	cout << "| Щоб вийти з програми введіть S                                         |" << endl;
+}

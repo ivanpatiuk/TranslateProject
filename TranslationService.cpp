@@ -14,10 +14,7 @@ void TranslationService::addTranslation() {
 	string topic;
 	int translationType;
 	cout << "--------------------------------------------------------------------------" << endl;
-	cout << "| Доступні розділи:                                                      |" << endl;
-	cout << "| (1) Transport                                                          |" << endl;
-	cout << "| (2) Fruits                                                             |" << endl;
-	cout << "| (3) Vegetables                                                         |" << endl;
+	ConsoleInterface::printAvailableTopics();
 	cout << "--------------------------------------------------------------------------" << endl;
 	cout << "Введіть назву розділу на англійській з великої букви: "; cin >> topic;
 	cout << "Виберіть тип перекладу: " << endl;
@@ -35,13 +32,9 @@ void TranslationService::showTranslation() {
 	string topic;
 	int translationType;
 	cout << "--------------------------------------------------------------------------" << endl;
-	cout << "| Доступні розділи:                                                      |" << endl;
-	cout << "| (1) Transport                                                          |" << endl;
-	cout << "| (2) Fruits                                                             |" << endl;
-	cout << "| (3) Vegetables                                                         |" << endl;
+	ConsoleInterface::printAvailableTopics();
 	cout << "|                                                                        |" << endl;
-	cout << "| Щоб повернутися до попереднього меню введіть B                         |" << endl;
-	cout << "| Щоб вийти з програми введіть S                                         |" << endl;
+	ConsoleInterface::printReturnHint();
 	cout << "--------------------------------------------------------------------------" << endl;
 	cout << "Введіть назву розділу на англійській з великої букви: ";
 	cin >> topic; 

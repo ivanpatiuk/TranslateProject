@@ -1,3 +1,4 @@
 банан=banana
 €блоко=apple
 апельсин=orange
+ананас=pineapple
